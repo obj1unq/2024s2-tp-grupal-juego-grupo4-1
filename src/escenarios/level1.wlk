@@ -11,6 +11,7 @@ object level1 {
         game.addVisual(new HeladoComun())
         game.addVisual(new BebidaHelada())
         fantasmaManager.crearFantasmas()
+        game.addVisual(new Superchocolate())
     }
 
     method puntuacion(){

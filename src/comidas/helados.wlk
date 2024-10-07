@@ -32,6 +32,25 @@ class BebidaHelada{
         return 20000
     }
 
+    method remove(){
+        game.removeVisual(self)
+    }
+    method colisionarConPoocman(poocman){
+        self.remove()
+        poocman.level().puntuacion(self)
+        poocman.borracho()
+    }
+}
+class Superchocolate {
+     var property position = game.at(5,8);
+
+    method image() {
+        return "heladoComun.png"
+    } 
+
+    method puntos(){
+        return 1000
+    }
 
     method remove(){
         game.removeVisual(self)
@@ -39,8 +58,9 @@ class BebidaHelada{
 
     method colisionarConPoocman(poocman){
         self.remove()
-        poocman.level().puntuacion(self)
-        poocman.borracho()
+        poocman.transformacionssj()
+        level1.puntuacion(self)
     }
 
+  
 }

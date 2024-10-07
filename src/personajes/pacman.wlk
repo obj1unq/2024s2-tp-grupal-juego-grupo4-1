@@ -4,35 +4,23 @@ import src.managers.fantasmaManager.*
 import src.managers.posicionManager.*
 
 object pacman {
-    var haciaDondeIr = izquierda
+    var haciaDondeIr = derecha
     var property  level = level1
     var property estado = normal
 
     var property position = game.at(10,7)
 
     method image() {
-        return "pacMan.png"
+        return "pacMan-"+estado+"-"+haciaDondeIr+".png"
     }
 
     method cambioDireccion(direccion) {
-        if(self.estaBorracho()){
-          haciaDondeIr = direccion.opuesto()
-        } else {
-          haciaDondeIr = direccion
-        }
+          haciaDondeIr = estado.haciaDondeIr(direccion)
     }
 
-    method estaBorracho(){
-      return estado == borracho
-    }
 
   method moverse() {
       position = game.at(haciaDondeIr.x(self.position()), haciaDondeIr.y(self.position()))
-      self.colision()
-  }
-
-  method colision() {
-      game.colliders(self).forEach({obj => obj.colisionarConPoocman(self)})
   }
 
   method puntuacion(){
@@ -51,13 +39,37 @@ object pacman {
   method borracho(){
     estado = borracho
   }
+  method transformacionssj() {
+      estado = ssj
+      game.schedule(10000, {self.normal()})
+    
+  }
+  method normal() {
+    estado = normal 
+    }
+    method estatransformado() {
+      return estado == ssj 
+      
+    }
 
-}
-
-object borracho {
   
 }
 
-object normal{
+object  ssj  {
+    method haciaDondeIr(direccion){
+      return direccion
+    }
+  
+}
 
+object borracho {
+    method haciaDondeIr(direccion){
+      return direccion.opuesto()
+    }
+}
+
+object normal{
+  method haciaDondeIr(direccion){
+    return direccion
+  }
 }
