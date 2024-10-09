@@ -4,7 +4,7 @@ class Fantasma {
     var property position = game.at(0,0) 
 
     method image(){
-        return "pepita.png"
+        return "fantasma.png"
     }
     method remove() {
         game.removeVisual(self)

@@ -2,12 +2,13 @@ import wollok.game.*
 import src.personajes.pacman.*
 import src.comidas.helados.*
 import src.managers.posicionManager.*
+import escenarios.laberinto.*
 
 
 program pooc_man{
     // CONFIGURACION JUEGO
     game.boardGround("pacman-30th-anniversary.png")
-    game.cellSize(40)
+    game.cellSize(50)
     game.width(25)
     game.height(15)
     pacman.level().iniciarNivel()
@@ -26,5 +27,5 @@ program pooc_man{
     game.onTick(250, "movimiento", {pacman.moverse()})
 
     game.start()
-// porque teniamos esto, mira
+
 }

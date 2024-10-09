@@ -64,3 +64,26 @@ class Superchocolate {
 
   
 }
+
+
+class Bolita {
+
+const property position 
+
+    method image() {
+        return "comida.png"
+    } 
+
+    method puntos(){
+        return 100
+    }
+
+    method remove(){
+        game.removeVisual(self)
+    }
+
+    method colisionarConPoocman(poocman){
+        self.remove()
+        poocman.level().puntuacion(self)
+    }
+}
