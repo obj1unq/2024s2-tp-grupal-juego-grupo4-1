@@ -9,11 +9,11 @@ object level1 {
 
 
     method iniciarNivel(){    
-    //mapa.dibujar()
-    game.addVisual(new HeladoComun())
-    game.addVisual(new BebidaHelada())
-    fantasmaManager.crearFantasmas()
-    game.addVisual(new Superchocolate())
+    mapa.dibujar()
+    //game.addVisual(new HeladoComun())
+    //game.addVisual(new BebidaHelada())
+    //fantasmaManager.crearFantasmas()
+    //game.addVisual(new Superchocolate())
     }
 
     method puntuacion(){

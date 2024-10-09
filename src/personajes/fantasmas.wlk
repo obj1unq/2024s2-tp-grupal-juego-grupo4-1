@@ -6,6 +6,11 @@ class Fantasma {
     method image(){
         return "fantasma.png"
     }
+
+    method solida() {
+		  return true
+	}
+
     method remove() {
         game.removeVisual(self)
       
@@ -18,5 +23,7 @@ class Fantasma {
        
        else { poocman.asesinado()
     }
+
+    
 }  
 }

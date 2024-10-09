@@ -19,6 +19,10 @@ class HeladoComun {
         self.remove()
         poocman.level().puntuacion(self)
     }
+
+    method solida() {
+		return false
+	}
 }
 
 class BebidaHelada{
@@ -40,6 +44,10 @@ class BebidaHelada{
         poocman.level().puntuacion(self)
         poocman.borracho()
     }
+
+    method solida() {
+		return false
+	}
 }
 class Superchocolate {
      var property position = game.at(5,8);
@@ -61,6 +69,10 @@ class Superchocolate {
         poocman.transformacionssj()
         level1.puntuacion(self)
     }
+
+    method solida() {
+		return false
+	}
 
   
 }
@@ -86,4 +98,8 @@ const property position
         self.remove()
         poocman.level().puntuacion(self)
     }
+
+    method solida() {
+		return false
+	}
 }
