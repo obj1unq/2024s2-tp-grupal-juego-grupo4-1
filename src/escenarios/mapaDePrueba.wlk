@@ -68,7 +68,7 @@ object mapa {
     const tablero = 
 [
   [m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m],
-  [m,f,_,f,f,f,_,_,f,f,f,f,g,f,f,f,f,_,f,f,f,f,f,f,m],
+  [m,g,_,f,f,f,_,_,f,f,f,f,f,f,f,f,f,_,f,f,f,f,f,g,m],
   [m,m,_,_,_,_,fb,_,f,_,_,_,_,_,_,_,_,_,f,_,_,_,_,f,m],
   [m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m]
 ].reverse()

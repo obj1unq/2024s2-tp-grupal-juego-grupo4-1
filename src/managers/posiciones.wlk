@@ -1,5 +1,5 @@
 object direcciones{
-    const direcciones = [arriba,abajo,izquierda,derecha]
+    const property direcciones = [arriba,abajo,izquierda,derecha]
 
 
     method direccionRandom(pesonaje){
