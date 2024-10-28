@@ -38,7 +38,7 @@ class Personaje{
         return not self.haySolido(_direccion.siguiente(position))
     }
     method sePuedeMover() {
-        return not self.haySolido(direccion.siguiente(position))
+        return self.sePuedeMoverHacia(direccion)
     }
 
     method normal() {  

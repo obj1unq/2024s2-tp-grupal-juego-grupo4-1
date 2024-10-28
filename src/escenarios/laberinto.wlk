@@ -5,6 +5,7 @@ import comidas.helados.*
 import escenarios.level1.*
 import wollok.game.*
 import managers.fantasmaManager.*
+import managers.comidaManager.*
 
 object _ {
     method dibujarEn(position) {
@@ -25,7 +26,6 @@ object m {
     }
 }
 
-    //Aca voy a modelar los fantasmas usando un factory para los fantasmas
 object f {
     method dibujarEn(position) {
         game.addVisual(new Bolita(position = position))
