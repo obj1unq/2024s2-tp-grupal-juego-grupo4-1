@@ -88,7 +88,7 @@ object mapa {
       [m,h,m,_,_,m,h,m,h,m,_,_,m,h,m,_,_,m,h,m,_,_,m,h,m],
       [m,h,m,_,_,m,h,m,h,m,_,_,m,h,m,_,_,m,h,m,_,_,m,h,m],
       [m,h,m,m,m,m,h,m,h,m,m,m,m,h,m,m,m,m,h,m,m,m,m,h,m],
-      [m,h,h,p,h,h,h,m,h,h,h,h,h,h,h,h,h,m,h,h,h,h,h,h,m],
+      [m,h,c,p,h,h,h,m,h,h,h,h,h,h,h,h,h,m,h,h,h,h,h,h,m],
       [m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m]
     ].reverse()
 
