@@ -1,0 +1,30 @@
+import personajes.pacman.*
+import mapas.ElementosMapa.*
+
+class Mapa{
+
+    
+    method laberinto()
+
+    method dibujar() {
+        game.height(self.laberinto().size())
+        game.width(self.laberinto().get(0).size())
+
+        (0..game.width() - 1).forEach({ x =>
+            (0..game.height() -1).forEach({y =>
+                self.laberinto().get(y).get(x).dibujarEn(game.at(x,y))
+            })
+        })
+        game.addVisual(pacman)
+    }
+
+    method removerHeladoComun(){
+        self.laberinto().removeAll([h])
+    }
+
+    method hayHelados(){
+        return self.laberinto().contains([h,c])
+    }
+
+
+}

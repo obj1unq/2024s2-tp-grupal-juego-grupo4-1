@@ -3,20 +3,22 @@ import wollok.game.*
 import src.comidas.helados.*
 import src.personajes.fantasmas.*
 import src.managers.fantasmaManager.*
-import src.escenarios.laberinto.*
 import src.escenarios.pantallaInicial.*
 
-object level1 {
-    var puntuacion = 0
+class Level {
+    var property puntuacion = 0
 
+    method mapa()
 
     method iniciarNivel(){    
-        self.validarPantallaDeInicio()
+        // self.validarPantallaDeInicio()
         game.removeVisual(mainScreen)
-        mapa.dibujar()
+        self.mapa().dibujar()
         game.onTick(20, "movimiento", {pacman.moverse()})
         game.onTick(10, "movimiento fantasmas", {fantasmaManager.mover()})
     }
+
+    method siguienteNivel()
 
     method validarPantallaDeInicio() {
         const posicionMainScreen = mainScreen.menu()
@@ -36,21 +38,8 @@ object level1 {
     }
 
     method removerHeladoComunDelNivel(){
-        mapa.removerHeladoComun()
+        self.mapa().removerHeladoComun()
     }
 
 }
 
-class Muro {
-
-    const property position
-
-    method image() {
-        return "muro.png"
-    }
-
-    method solida() {
-		return true
-	}
-
-}
