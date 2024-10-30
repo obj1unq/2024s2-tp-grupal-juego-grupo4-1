@@ -26,13 +26,15 @@ object m {
     }
 }
 
-object f {
+object h {
     method dibujarEn(position) {
-        game.addVisual(new Bolita(position = position))
+        const newHelado = new HeladoComun(position = position)
+        game.addVisual(newHelado)
+        comidaManager.agregarHc(newHelado)
     }
 }
 
-object h {
+object c {
     method dibujarEn(position) {
         game.addVisual(new Superchocolate(position = position))
     }
@@ -42,7 +44,6 @@ object g {
     method dibujarEn(position) {
         const newFantasma = new Fantasma(position = position)
         game.addVisual(newFantasma)
-
         fantasmaManager.agregarFantasma(newFantasma)
     }
 }
@@ -65,31 +66,31 @@ object b {
 object mapa {
 
     const tablero = 
-[
-  [m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m],
-  [m,f,_,f,f,f,f,m,f,f,f,f,f,f,f,f,f,m,f,f,f,f,f,f,m],
-  [m,f,m,m,m,m,f,m,f,m,m,m,m,f,m,m,m,m,f,m,m,m,m,f,m],
-  [m,f,m,_,_,m,f,m,f,m,_,_,m,f,m,_,_,m,f,m,_,_,m,f,m],
-  [m,f,m,_,_,m,f,m,f,m,_,_,m,f,m,_,_,m,f,m,_,_,m,f,m],
-  [m,f,m,m,m,m,f,m,f,m,m,m,m,f,m,m,m,m,f,m,m,m,m,f,m],
-  [m,f,f,f,f,f,f,f,f,f,f,f,f,fb,f,f,f,f,f,f,f,f,f,f,m],
-  [m,f,m,m,m,m,f,m,m,m,m,m,m,f,m,m,m,m,f,m,m,m,m,f,m],
-  [m,f,m,_,_,m,f,m,_,_,_,_,m,f,m,_,_,m,f,m,_,_,m,h,m],
-  [m,f,m,_,_,m,f,m,_,g,g,_,m,f,m,_,_,m,f,m,_,_,m,f,m],
-  [m,f,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,f,m],
-  [m,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,m],
-  [m,f,m,m,m,m,f,m,m,m,m,m,m,f,m,m,m,m,f,m,m,m,m,f,m],
-  [m,f,m,_,_,m,f,m,_,_,_,_,m,f,m,_,_,m,f,m,_,_,m,f,m],
-  [m,f,m,_,_,m,f,m,_,_,_,_,m,f,m,_,_,m,f,m,_,_,m,g,m],
-  [m,f,m,m,m,m,f,m,m,m,m,m,m,f,m,m,m,m,f,m,m,m,m,f,m],
-  [m,b,f,b,f,f,f,f,f,f,f,f,g,f,f,f,f,f,f,f,f,f,f,f,m],
-  [m,f,m,m,m,m,f,m,m,m,m,m,m,f,m,m,m,m,f,m,m,m,m,f,m],
-  [m,f,m,_,_,m,f,m,f,m,_,_,m,f,m,_,_,m,f,m,_,_,m,f,m],
-  [m,f,m,_,_,m,f,m,f,m,_,_,m,f,m,_,_,m,f,m,_,_,m,f,m],
-  [m,f,m,m,m,m,f,m,f,m,m,m,m,f,m,m,m,m,f,m,m,m,m,f,m],
-  [m,f,h,p,f,f,f,m,f,f,f,f,f,f,f,f,f,m,f,f,f,f,f,f,m],
-  [m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m]
-].reverse()
+    [
+      [m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m],
+      [m,h,_,h,h,h,h,m,h,h,h,h,h,h,h,h,h,m,h,h,h,h,h,h,m],
+      [m,h,m,m,m,m,h,m,h,m,m,m,m,h,m,m,m,m,h,m,m,m,m,h,m],
+      [m,h,m,_,_,m,h,m,h,m,_,_,m,h,m,_,_,m,h,m,_,_,m,h,m],
+      [m,h,m,_,_,m,h,m,h,m,_,_,m,h,m,_,_,m,h,m,_,_,m,h,m],
+      [m,h,m,m,m,m,h,m,h,m,m,m,m,h,m,m,m,m,h,m,m,m,m,h,m],
+      [m,h,h,h,h,h,h,h,h,h,h,h,h,fb,h,h,h,h,h,h,h,h,h,h,m],
+      [m,h,m,m,m,m,h,m,m,m,m,m,m,h,m,m,m,m,h,m,m,m,m,h,m],
+      [m,h,m,_,_,m,h,m,_,_,_,_,m,h,m,_,_,m,h,m,_,_,m,h,m],
+      [m,h,m,_,_,m,h,m,_,g,g,_,m,h,m,_,_,m,h,m,_,_,m,h,m],
+      [m,h,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,h,m],
+      [m,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,m],
+      [m,h,m,m,m,m,h,m,m,m,m,m,m,h,m,m,m,m,h,m,m,m,m,h,m],
+      [m,h,m,_,_,m,h,m,_,_,_,_,m,h,m,_,_,m,h,m,_,_,m,h,m],
+      [m,h,m,_,_,m,h,m,_,_,_,_,m,h,m,_,_,m,h,m,_,_,m,g,m],
+      [m,h,m,m,m,m,h,m,m,m,m,m,m,h,m,m,m,m,h,m,m,m,m,h,m],
+      [m,b,h,b,h,h,h,h,h,h,h,h,g,h,h,h,h,h,h,h,h,h,h,h,m],
+      [m,h,m,m,m,m,h,m,m,m,m,m,m,h,m,m,m,m,h,m,m,m,m,h,m],
+      [m,h,m,_,_,m,h,m,h,m,_,_,m,h,m,_,_,m,h,m,_,_,m,h,m],
+      [m,h,m,_,_,m,h,m,h,m,_,_,m,h,m,_,_,m,h,m,_,_,m,h,m],
+      [m,h,m,m,m,m,h,m,h,m,m,m,m,h,m,m,m,m,h,m,m,m,m,h,m],
+      [m,h,h,p,h,h,h,m,h,h,h,h,h,h,h,h,h,m,h,h,h,h,h,h,m],
+      [m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m]
+    ].reverse()
 
     
     method dibujar() {
@@ -102,12 +103,11 @@ object mapa {
             })
         })
         game.addVisual(pacman) //Lo pongo aca por el eje z
-
-
     }
 
-
-
+    method removerHeladoComun(){
+        tablero.removeAll([h])
+    }
 
 
 

@@ -1,7 +1,11 @@
 object comidaManager {
-    const comidas = []
+    const helados = []
 
-    method agregarComida(comida){
-        comidas.add(comida)
+    method agregarHc(h){
+        helados.add(h)
+    }
+
+    method noHayMasHelado(){
+        return helados.isEmpty()
     }
 }
