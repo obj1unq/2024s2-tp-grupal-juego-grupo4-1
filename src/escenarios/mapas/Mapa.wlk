@@ -1,5 +1,4 @@
 import personajes.pacman.*
-import mapas.ElementosMapa.*
 
 class Mapa{
 

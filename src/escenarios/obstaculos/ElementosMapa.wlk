@@ -36,7 +36,9 @@ object h {
 
 object c {
     method dibujarEn(position) {
-        game.addVisual(new Superchocolate(position = position))
+        const c = new Superchocolate(position = position)
+        game.addVisual(c)
+        heladoManager.agregarHelado(c)
     }
 }
 
@@ -60,6 +62,8 @@ object fb {
 
 object b {
     method dibujarEn(position) {
-        game.addVisual(new BebidaHelada(position = position))
+        const b = new BebidaHelada(position = position)
+        game.addVisual(b)
+        heladoManager.agregarHelado(b)
     }
 }

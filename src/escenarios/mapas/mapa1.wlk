@@ -1,4 +1,4 @@
-import mapas.ElementosMapa.*
+import obstaculos.ElementosMapa.*
 import mapas.Mapa.*
 
 object mapa1 inherits Mapa{

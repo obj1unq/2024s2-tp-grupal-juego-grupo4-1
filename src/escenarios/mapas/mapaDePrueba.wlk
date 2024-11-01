@@ -1,5 +1,6 @@
 import mapas.Mapa.*
-import mapas.ElementosMapa.*
+import obstaculos.ElementosMapa.*
+
 object mapaPrueba inherits Mapa {
     const laberinto = [
             [m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m],

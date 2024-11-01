@@ -13,7 +13,7 @@ program pooc_man{
     game.addVisual(mainScreen)
 
     keyboard.enter().onPressDo({
-        levelManager.iniciarNivel()
+        mainScreen.iniciarJuego()
     })
     
     
