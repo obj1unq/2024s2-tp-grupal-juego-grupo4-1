@@ -3,7 +3,10 @@ import personajes.fantasmas.*
 import comidas.helados.*
 import wollok.game.*
 import managers.fantasmaManager.*
+import managers.heladoManager.*
 import obstaculos.Muro.*
+
+
 object _ {
     method dibujarEn(position) {
 
@@ -26,6 +29,7 @@ object m {
 object h {
     method dibujarEn(position) {
         const newHelado = new HeladoComun(position = position)
+        heladoManager.agregarHelado(newHelado)
         game.addVisual(newHelado)
     }
 }

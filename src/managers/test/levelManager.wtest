@@ -1,5 +1,6 @@
 import managers.posiciones.*
 import managers.levelManager.*
+import managers.heladoManager.*
 import escenarios.pantallaInicial.*
 import personajes.pacman.*
 import escenarios.levels.levelPrueba.*
@@ -13,7 +14,7 @@ describe "LEVEL MANAGER"{
         levelManager.iniciarNivel()
     }
     test "No hay mas helados en el level de prueba"{
-        levelPrueba.removerHeladoComunDelNivel()
+        heladoManager.removerHelados()
         assert.notThat(levelManager.hayHelado())
     }
 
@@ -22,7 +23,7 @@ describe "LEVEL MANAGER"{
         pacman.cambioDireccion(derecha)
         pacman.moverse()
         heladoComun.get(0).colisionarConpacman(pacman)
-        levelManager.comioTodo()
-        assert.equals(level1, pacman.level())
+        assert.that(levelManager.hayHelado())
+        assert.equals(level1, levelManager.levelActual())
     }
 }

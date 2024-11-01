@@ -1,12 +1,14 @@
 
 import escenarios.levels.level1.*
+import escenarios.levels.levelPrueba.*
+import heladoManager.*
 
 object levelManager {
 
-    var property  levelActual = level1
+    var property  levelActual = levelPrueba
     
     method hayHelado(){
-        return levelActual.mapa().hayHelados()
+        return heladoManager.hayHelado()
     }
 
     method haySolido(_position) {
@@ -14,13 +16,14 @@ object levelManager {
 	}
 
     method comioTodo(){
-        if(self.hayHelado()){// PROBLEMA ACA
+        if(not heladoManager.hayHelado()){
             self.pasarDeNivel()
-            levelActual.iniciarNivel()
+            self.iniciarNivel()
         }
     }
 
     method iniciarNivel(){
+        game.allVisuals().forEach({visual => game.removeVisual(visual)})
         levelActual.iniciarNivel()
     }
 
@@ -29,6 +32,11 @@ object levelManager {
     }
 
     method comioHelado(helado){
+        levelActual.comioHelado(helado)
         self.comioTodo()
+    }
+
+    method puntuacionLevel(){
+        return levelActual.puntuacion()
     }
 }

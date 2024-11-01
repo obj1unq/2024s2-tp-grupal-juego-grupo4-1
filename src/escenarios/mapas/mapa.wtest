@@ -1,8 +1,0 @@
-import mapa1.*
-describe "Mapa y consultas al laberinto"{
-    test "Hay helado despues de dibujar el laberinto"{
-        assert.that(mapa1.hayHelado())
-        mapa1.removerHelados()
-        assert.notThat(mapa1.hayHelado())
-    }
-}

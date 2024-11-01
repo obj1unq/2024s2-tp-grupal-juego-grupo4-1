@@ -3,6 +3,7 @@ import wollok.game.*
 import src.comidas.helados.*
 import src.personajes.fantasmas.*
 import src.managers.fantasmaManager.*
+import src.managers.heladoManager.*
 import src.escenarios.pantallaInicial.*
 
 class Level {
@@ -37,12 +38,9 @@ class Level {
         puntuacion += helado.puntos()
     }
 
-    method removerHeladosEnElNivel(){
-        self.mapa().removerHelados()
-    }
-
-    method hayHeladoEnElNivel(){
-        return self.mapa().hayHelado()
+    method comioHelado(helado){
+        self.puntuacion(helado)
+        heladoManager.comioHelado(helado)
     }
 
 }
