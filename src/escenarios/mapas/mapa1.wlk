@@ -1,11 +1,8 @@
-import wollok.game.*
 import mapas.ElementosMapa.*
 import mapas.Mapa.*
 
 object mapa1 inherits Mapa{
-
-    override method laberinto(){
-        return [
+    const laberinto = [
             [m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m],
             [m,h,_,h,h,h,h,m,h,h,h,h,h,h,h,h,h,m,h,h,h,h,h,h,m],
             [m,h,m,m,m,m,h,m,h,m,m,m,m,h,m,m,m,m,h,m,m,m,m,h,m],
@@ -29,9 +26,9 @@ object mapa1 inherits Mapa{
             [m,h,m,m,m,m,h,m,h,m,m,m,m,h,m,m,m,m,h,m,m,m,m,h,m],
             [m,h,c,p,h,h,h,m,h,h,h,h,h,h,h,h,h,m,h,h,h,h,h,h,m],
             [m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m]
-                ].reverse()
+                ].reverse() 
+    override method laberinto(){
+        return laberinto
     }
-
-
 
 }

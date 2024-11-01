@@ -3,7 +3,7 @@ import escenarios.levels.level1.*
 
 object levelManager {
 
-    var levelActual = level1
+    var property  levelActual = level1
     
     method hayHelado(){
         return levelActual.mapa().hayHelados()

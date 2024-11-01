@@ -37,8 +37,12 @@ class Level {
         puntuacion += helado.puntos()
     }
 
-    method removerHeladoComunDelNivel(){
-        self.mapa().removerHeladoComun()
+    method removerHeladosEnElNivel(){
+        self.mapa().removerHelados()
+    }
+
+    method hayHeladoEnElNivel(){
+        return self.mapa().hayHelado()
     }
 
 }

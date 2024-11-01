@@ -3,8 +3,8 @@ import mapas.ElementosMapa.*
 
 class Mapa{
 
-    
-    method laberinto()
+   
+    method laberinto()    
 
     method dibujar() {
         game.height(self.laberinto().size())
@@ -18,12 +18,17 @@ class Mapa{
         game.addVisual(pacman)
     }
 
-    method removerHeladoComun(){
-        self.laberinto().removeAll([h])
+    method removerHelados() {// si remove all funcionara, seria laberinto.foreach()
+        self.laberinto().clear()
+        self.laberinto().addAll(self.laberintoSinHelados())
     }
 
-    method hayHelados(){
-        return self.laberinto().contains([h,c])
+    method laberintoSinHelados() {
+        return self.laberinto().map({ row => row.filter({o => o != h}) })
+    }
+
+    method hayHelado(){
+        return self.laberinto().any({row => row.contains(h)})
     }
 
 
