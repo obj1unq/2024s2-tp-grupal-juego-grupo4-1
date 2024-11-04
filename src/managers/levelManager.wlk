@@ -31,6 +31,7 @@ object levelManager {
         levelActual = levelActual.siguienteNivel()
     }
 
+
     method comioHelado(helado){
         levelActual.comioHelado(helado)
         self.comioTodo()
