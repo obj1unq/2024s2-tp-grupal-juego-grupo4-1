@@ -13,6 +13,7 @@ class PuntoReparicion {
 
     method revivirFantasma(f){
         f.position(self.position())
+        f.actualizarDireccion()
         game.addVisual(f)
     }
 
