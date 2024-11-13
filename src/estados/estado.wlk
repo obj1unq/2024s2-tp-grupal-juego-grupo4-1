@@ -1,5 +1,6 @@
 import wollok.game.*
 import personajes.pacman.*
+import managers.posiciones.*
 import managers.fantasmaManager.*
 class Estado {
     method direccion(direccion){
@@ -24,6 +25,14 @@ object borracho inherits Estado{
         return super(direccion).opuesto()
     }
 }
+
+object agresivo inherits Estado {
+    method direccionAgro(personaje,agro){
+        return direcciones.direccionFavorable(personaje,agro)
+    }
+}
+
+
 
 object normal inherits Estado{}
 

@@ -52,3 +52,16 @@ class FantasmaBorracho inherits Fantasma(estado = borracho){
         estado = borracho
     }
 }
+
+class FantasmaTiburon inherits Fantasma(estado = agresivo){
+
+
+    
+    override method actualizarDireccion(){
+        direccion = estado.direccionAgro(self,pacman)
+    }
+
+    override method normalidad (){
+        estado = agresivo
+    }
+}
