@@ -17,9 +17,22 @@ object direcciones{
         }
     }
 
+    method direccionParaHuir(personaje,agro){
+        if(self.direccionesValidasSinDeLaQueVengo(personaje).isEmpty()){
+            return personaje.direccionDeLaQueVengo()
+        } else {
+            return self.direccionConLaMayorDistanciaA(personaje,agro) 
+        }
+    }
+
     method direccionConLaMenorDistanciaA(personaje,agro)  {
         return self.direccionesValidasSinDeLaQueVengo(personaje).min({direccion => self.distanciaHacia(personaje,direccion, agro)})
     }
+
+    method direccionConLaMayorDistanciaA(personaje,agro)  {
+        return self.direccionesValidasSinDeLaQueVengo(personaje).max({direccion => self.distanciaHacia(personaje,direccion, agro)})
+    }
+
 
     method distanciaHacia(personaje,direccion,agro){
         return direccion.siguiente(personaje.position()).distance(agro.position())

@@ -27,7 +27,7 @@ object borracho inherits Estado{
 }
 
 object agresivo inherits Estado {
-    method direccionAgro(personaje,agro){
+    method direccionMov(personaje,agro){
         return direcciones.direccionFavorable(personaje,agro)
     }
 }
@@ -39,5 +39,7 @@ object normal inherits Estado{}
 object asesinado inherits Estado {}
 
 object asustado inherits Estado {
-    
+    method direccionMov(personaje,agro){
+        return direcciones.direccionParaHuir(personaje,agro)
+    }
 }

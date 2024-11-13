@@ -58,7 +58,7 @@ class FantasmaTiburon inherits Fantasma(estado = agresivo){
 
     
     override method actualizarDireccion(){
-        direccion = estado.direccionAgro(self,pacman)
+        direccion = estado.direccionMov(self,pacman)
     }
 
     override method normalidad (){
