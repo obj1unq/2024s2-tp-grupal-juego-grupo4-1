@@ -30,6 +30,8 @@ class Fantasma inherits Personaje{
     method actualizarDireccion(){
         if(not self.sePuedeMover()){
             direccion = direcciones.direccionRandom(self)
+        } else {
+            direccion = estado.direccionMov(self,pacman)
         }
     }
 
@@ -38,6 +40,7 @@ class Fantasma inherits Personaje{
     }
 
 }
+
 
 //agregar fantasma que avance dos pixeles
 

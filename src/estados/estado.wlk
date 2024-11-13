@@ -10,6 +10,10 @@ class Estado {
     method colisionarConFantasma(fantasma){
         pacman.asesinado() 
     }
+
+    method direccionMov(personaje,agro){
+        return personaje.direccion()
+    }
 }
 
 
@@ -27,7 +31,7 @@ object borracho inherits Estado{
 }
 
 object agresivo inherits Estado {
-    method direccionMov(personaje,agro){
+    override method direccionMov(personaje,agro){
         return direcciones.direccionFavorable(personaje,agro)
     }
 }
@@ -39,7 +43,7 @@ object normal inherits Estado{}
 object asesinado inherits Estado {}
 
 object asustado inherits Estado {
-    method direccionMov(personaje,agro){
+    override method direccionMov(personaje,agro){
         return direcciones.direccionParaHuir(personaje,agro)
     }
 }
