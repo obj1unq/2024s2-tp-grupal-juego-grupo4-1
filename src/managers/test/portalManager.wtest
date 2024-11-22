@@ -8,6 +8,7 @@ import escenarios.mapas.mapaDePrueba.*
 import escenarios.obstaculos.Portal.*
 
 describe "Testeando portales en levelPrueba"{
+    
     method initialize(){
         game.addVisual(mainScreen)
         levelManager.levelActual(levelPrueba)

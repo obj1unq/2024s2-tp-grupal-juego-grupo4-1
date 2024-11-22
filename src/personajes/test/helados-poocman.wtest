@@ -26,6 +26,7 @@ describe "Pacman y los helados en el mapa de prueba"{
         assert.equals(1000, levelManager.puntuacionLevel())
     }  
     
+    
     test "pacman comiendo chocolate" {
         const helado = heladoManager.heladoEn(game.at(2,2))
         pacman.moverse()

@@ -16,6 +16,7 @@ object direcciones{
             return self.direccionConLaMenorDistanciaA(personaje,agro) 
         }
     }
+    
 
     method direccionParaHuir(personaje,agro){
         if(self.direccionesValidasSinDeLaQueVengo(personaje).isEmpty()){

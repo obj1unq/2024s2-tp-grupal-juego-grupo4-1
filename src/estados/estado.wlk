@@ -45,6 +45,7 @@ object normal inherits Estado{
 }
 object asesinado inherits Estado {}
 
+
 object asustado inherits Estado {
     override method direccionMov(personaje,agro){
         return direcciones.direccionParaHuir(personaje,agro)

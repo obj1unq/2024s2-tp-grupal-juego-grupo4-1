@@ -46,6 +46,7 @@ describe "Movimiento pacman" {
       pacman.moverse()
       assert.equals(game.at(6,1), pacman.position())
     }
+    
     test "movimiento hacia abajo hasta que pueda hacerlo"{
         pacman.position(game.at(7,2))
         pacman.cambioDireccion(abajo)

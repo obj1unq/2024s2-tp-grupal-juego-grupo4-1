@@ -8,6 +8,7 @@ import managers.heladoManager.*
 import estados.estado.*
 import escenarios.mapas.mapaDePrueba.*
 
+
 describe "Fantasmas y pacman" {
 
     const fantasma = fantasmaManager.fantasmasEn(game.at(1,2)).get(0)

@@ -8,6 +8,7 @@ import escenarios.mapas.mapaDePrueba.*
 import managers.heladoManager.*
 describe "Posiciones test" {
 
+
     method initialize(){
         game.addVisual(mainScreen)
         levelManager.levelActual(levelPrueba)

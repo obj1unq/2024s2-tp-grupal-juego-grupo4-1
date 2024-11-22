@@ -32,6 +32,7 @@ describe "Fantasma Manager" {
         assert.that(game.allVisuals().contains(fantasma))
 
     }
+    
 
     test "Fantasma intenta revivir"{
         fantasmaManager.clearPuntosDeReaparicion()

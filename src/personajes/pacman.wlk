@@ -13,6 +13,8 @@ object pacman inherits Personaje{
       game.say(self, "Puntuacion: " + levelManager.puntuacionLevel())
     }
 
+    
+
     method asesinado() {
       estado = asesinado
       game.say(self, "La quede :P")

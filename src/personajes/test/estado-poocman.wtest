@@ -9,6 +9,7 @@ import managers.heladoManager.*
 import managers.fantasmaManager.*
 
 
+
 describe "Fantasmas y pacman" {
 
     method initialize(){

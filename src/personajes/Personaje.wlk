@@ -44,6 +44,7 @@ class Personaje{
         return self.sePuedeMoverHacia(direccion)
     }
 
+
     method normal() {  
         estado = normal 
     }

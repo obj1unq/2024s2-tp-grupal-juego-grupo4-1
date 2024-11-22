@@ -7,6 +7,7 @@ import escenarios.levels.level1.*
 import escenarios.mapas.mapaDePrueba.*
 describe "Manager Helado"{
 
+
     method initialize(){
         game.addVisual(mainScreen)
         levelManager.levelActual(levelPrueba)

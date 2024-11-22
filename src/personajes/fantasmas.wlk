@@ -55,6 +55,7 @@ class FantasmaBorracho inherits Fantasma(estado = borracho){
 class FantasmaTiburon inherits Fantasma(estado = agresivo){
 
 
+
     override method normalidad (){
         estado = agresivo
     }

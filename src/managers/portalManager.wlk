@@ -11,6 +11,7 @@ object portalManager{
     method portalDeSalida(portal) {
         return portales.filter({portalM => portalM != portal}).anyOne()
     }
+    
 
     method posicionDelPortalDeSalida(portal){
         return self.portalDeSalida(portal).position()

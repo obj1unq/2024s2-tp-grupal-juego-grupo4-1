@@ -88,5 +88,6 @@ object fantasmaManager {
 
     method estanAsustados(){
         return fantasmasLevel.all({f => f.estado() == asustado})
+        
     }
 }

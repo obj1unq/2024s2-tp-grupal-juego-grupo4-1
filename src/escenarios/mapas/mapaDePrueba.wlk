@@ -10,6 +10,7 @@ object mapaPrueba inherits Mapa {
         [m,m,p,h,_,_,_,m,_,_,_,_,ft,bh,_,_,_,_,_,_,_,t,_,m,m],
         [m,m,m,m,m,m,_,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m] 
     ].reverse()
+    
 
     override method laberinto(){
         return laberinto
