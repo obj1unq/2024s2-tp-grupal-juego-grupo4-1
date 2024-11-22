@@ -24,6 +24,7 @@ describe "LEVEL MANAGER"{
         const heladoComun = heladoManager.heladoEn(game.at(3,1))
         const heladoChoco = heladoManager.heladoEn(game.at(2,2))
         const balde = heladoManager.heladoEn(game.at(13,1))
+        const bebida = heladoManager.heladoEn(game.at(3,2))
         pacman.cambioDireccion(derecha)
         pacman.moverse()
         heladoComun.colisionarConPacman(pacman)
@@ -33,6 +34,8 @@ describe "LEVEL MANAGER"{
         heladoChoco.colisionarConPacman(pacman)
         pacman.position(game.at(13,1))
         balde.colisionarConPacman(pacman)
+        pacman.position(game.at(3,2))
+        bebida.colisionarConPacman(pacman)
         assert.equals(level1, levelManager.levelActual())
     }
 }
