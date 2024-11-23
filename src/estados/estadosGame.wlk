@@ -27,7 +27,7 @@ object pausa inherits EstadoGame{
 object gameOver  inherits EstadoGame {
 
     method image(){
-        return "main.jpg"
+        return "gameOver.jpg"
     }
         
     method position(){
@@ -47,4 +47,14 @@ object inicio inherits EstadoGame {
         return game.at(3, 3)
     }
 
+}
+
+object win inherits EstadoGame {
+    method image(){
+        return "main.jpg"
+    }
+
+    method position(){
+        return game.at(3,3)
+    }
 }

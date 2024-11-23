@@ -31,4 +31,10 @@ describe "Testeando portales en levelPrueba"{
         portal1.colisionarConPacman(pacman)
         assert.equals(game.at(5,2),pacman.position())
     }
+
+    test "Manager verifica si hay portales"{
+        assert.that(portalManager.hayPortalesEnElNivel())
+        portalManager.clearLevel()
+        assert.notThat(portalManager.hayPortalesEnElNivel())
+    }
 }

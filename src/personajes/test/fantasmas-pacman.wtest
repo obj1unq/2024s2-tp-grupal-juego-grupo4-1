@@ -23,6 +23,7 @@ describe "Fantasmas y pacman" {
         pacman.position(game.at(1,2))
         fantasma.colisionarConPacman(pacman)
         assert.equals(asesinado, pacman.estado())
+        
     }
 }
 

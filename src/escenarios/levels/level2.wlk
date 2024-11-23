@@ -6,7 +6,7 @@ object level2 inherits Level{
     }
 
     override method siguienteNivel(){
-    
+        return null
     }
 
 

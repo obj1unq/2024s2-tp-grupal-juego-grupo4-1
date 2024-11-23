@@ -35,5 +35,15 @@ object menuManager{
         estadoGame = jugando
     }
 
+    method win(){
+        estadoGame = win
+    }
+
+    method gano(){
+        self.win()
+        levelManager.clear()
+        levelManager.level1()
+        game.addVisual(estadoGame)
+    }
 
 }

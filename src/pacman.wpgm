@@ -6,7 +6,7 @@ import src.managers.menuManager.*
 import src.estados.estadosGame.*
 
 
-program pooc_man{
+program pac_man{
     game.width(25) 
     game.height(25)
     
