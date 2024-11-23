@@ -30,8 +30,8 @@ object mapa1 inherits Mapa{
             [m,h,m,h,m,h,m,h,m,h,m,h,m],
             [m,h,m,h,m,h,pr,h,m,h,m,h,m],
             [m,h,m,h,_,h,m,h,m,h,m,h,m],
-            [m,p,m,h,h,h,m,h,h,c,m,h,m],
-            [m,m,m,m,m,m,m,ft,m,m,m,m,m]
+            [m,p,m,h,h,h,m,h,ft,c,m,h,m],
+            [m,m,m,m,m,m,m,_,m,m,m,m,m]
                 ].reverse() 
     override method laberinto(){
         return laberinto

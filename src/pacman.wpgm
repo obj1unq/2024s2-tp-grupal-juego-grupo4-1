@@ -7,8 +7,8 @@ import src.estados.estadosGame.*
 
 
 program pac_man{
-    game.width(10) 
-    game.height(10)
+    game.width(25) 
+    game.height(25)
     
     game.addVisual(inicio)
 

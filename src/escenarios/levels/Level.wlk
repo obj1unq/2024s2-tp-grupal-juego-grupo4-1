@@ -2,8 +2,10 @@ import wollok.game.*
 import src.comidas.helados.*
 import src.personajes.fantasmas.*
 import src.managers.heladoManager.*
+import mapas.mapa1.*
 
 class Level {
+    const mapas = #{mapa1,mapa2,mapa3}
     var property puntuacion = 0
 
     method mapa()
