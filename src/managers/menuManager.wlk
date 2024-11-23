@@ -9,7 +9,6 @@ object menuManager{
     
     method pressEnter(){
         estadoGame.pressEnter()
-        self.jugando()
     }
 
     method pressBackSpace(){
@@ -18,16 +17,21 @@ object menuManager{
         game.stop()
     }
 
-    method estadoGame(){
-        return estadoGame
+    method pressP(){
+        estadoGame.pressP()
     }
 
-    method gameOver(){
-        estadoGame = gameOver
-    }
 
     method perdio(){
         self.gameOver()
+        levelManager.clear()
+        levelManager.level1()
+        game.addVisual(estadoGame)
+    }
+
+    
+    method gano(){
+        self.win()
         levelManager.clear()
         levelManager.level1()
         game.addVisual(estadoGame)
@@ -45,12 +49,18 @@ object menuManager{
         estadoGame = win
     }
 
-    method gano(){
-        self.win()
-        levelManager.clear()
-        levelManager.level1()
-        game.addVisual(estadoGame)
+    method pausa(){
+        estadoGame = pausa
     }
+    
+    method estadoGame(){
+        return estadoGame
+    }
+
+    method gameOver(){
+        estadoGame = gameOver
+    }
+
 
 }
 

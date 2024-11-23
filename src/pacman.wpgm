@@ -7,8 +7,8 @@ import src.estados.estadosGame.*
 
 
 program pac_man{
-    game.width(25) 
-    game.height(25)
+    game.width(10) 
+    game.height(10)
     
     game.addVisual(inicio)
 
@@ -20,7 +20,9 @@ program pac_man{
         menuManager.pressBackSpace()
     })
 
-    
+    keyboard.p().onPressDo({
+        menuManager.pressP()
+    })
     
     // TECLADO
 
@@ -29,7 +31,7 @@ program pac_man{
     keyboard.right().onPressDo({pacman.cambioDireccion(derecha)})
     keyboard.up().onPressDo({pacman.cambioDireccion(arriba)})
     keyboard.down().onPressDo({pacman.cambioDireccion(abajo)})
-    keyboard.p().onPressDo({levelManager.puntuacionLevel()})
+    keyboard.o().onPressDo({levelManager.puntuacionLevel()})
 
     game.start()
 

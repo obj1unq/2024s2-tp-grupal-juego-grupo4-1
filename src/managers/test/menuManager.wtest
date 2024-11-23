@@ -37,4 +37,11 @@ describe "Menu Test"{
         assert.equals(jugando, menuManager.estadoGame())
     }
 
+    test "Pacman pone pausa y saca la pausa"{
+        menuManager.pressP()
+        assert.equals(pausa, menuManager.estadoGame())
+        menuManager.pressP()
+        assert.equals(jugando, menuManager.estadoGame())
+    }
+
 }
