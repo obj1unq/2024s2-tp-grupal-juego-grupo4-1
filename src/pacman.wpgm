@@ -1,19 +1,19 @@
 import wollok.game.*
 import src.personajes.pacman.*
-import src.comidas.helados.*
 import src.managers.posiciones.*
 import src.managers.levelManager.*
-import escenarios.pantallaInicial.*
+import src.managers.menuManager.*
+import src.estados.estadosGame.*
 
 
 program pooc_man{
     game.width(25) 
     game.height(25)
     
-    game.addVisual(mainScreen)
+    game.addVisual(inicio)
 
     keyboard.enter().onPressDo({
-        mainScreen.iniciarJuego()
+        menuManager.pressEnter()
     })
     
     
