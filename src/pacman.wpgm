@@ -16,6 +16,11 @@ program pac_man{
         menuManager.pressEnter()
     })
     
+    keyboard.backspace().onPressDo({
+        menuManager.pressBackSpace()
+    })
+
+    
     
     // TECLADO
 

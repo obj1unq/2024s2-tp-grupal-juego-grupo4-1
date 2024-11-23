@@ -12,6 +12,12 @@ object menuManager{
         self.jugando()
     }
 
+    method pressBackSpace(){
+        levelManager.clear()
+        game.addVisual(pantallaSalida)
+        game.stop()
+    }
+
     method estadoGame(){
         return estadoGame
     }
@@ -46,4 +52,14 @@ object menuManager{
         game.addVisual(estadoGame)
     }
 
+}
+
+object pantallaSalida{
+    method image(){
+        return "creditos.jpg"
+    }
+
+    method position(){
+        return game.at(3,3)
+    }
 }
