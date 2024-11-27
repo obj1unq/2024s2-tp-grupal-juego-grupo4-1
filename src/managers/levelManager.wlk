@@ -20,16 +20,20 @@ object levelManager {
 	}
 
     method comioTodo(){
-        if(not heladoManager.hayHelado()){
+        if (!heladoManager.hayHelado()) {
             self.pasarDeNivel()
-            if(levelActual == null){
+            if (self.noHayMasNiveles()) {
                 self.gano()
-            } else  {
+            }   else {
                 self.iniciarNivel()
-            }
+            }   
         }
-
     }
+
+    method noHayMasNiveles() {
+        return levelActual == null
+    }
+
 //testear
     method iniciarNivel(){
         self.clear()
