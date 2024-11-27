@@ -1,3 +1,4 @@
+import levelManager.*
 import estados.estadosGame.*
 import portalManager.*
 import heladoManager.*
@@ -12,7 +13,7 @@ object menuManager{
     }
 
     method pressBackSpace(){
-
+        levelManager.clear()
         game.addVisual(pantallaSalida)
         game.stop()
     }
