@@ -3,6 +3,7 @@ import estados.estado.*
 import Personaje.*
 import managers.levelManager.*
 import managers.menuManager.*
+import src.Colision.Colision
 
 object pacman inherits Personaje{
 
@@ -24,6 +25,13 @@ object pacman inherits Personaje{
       estado = asesinado
       menuManager.perdio()
     }
+
+    override method colisionarConPacman(){
+    }  
+
+    override method colisionarConSombra(){
+    }
+
 
     override method moverse(){
       super()
@@ -47,4 +55,11 @@ class Sombra inherits Personaje{
   method image() {
         return "sombra.png" 
   }
+
+  override method colisionarConPacman(){
+  }  
+
+    override method colisionarConSombra(){
+    }
+
 }

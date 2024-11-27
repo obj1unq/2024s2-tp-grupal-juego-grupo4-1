@@ -2,6 +2,7 @@ import pacman.*
 import estados.estado.*
 import wollok.game.*
 import Personaje.*
+import src.Colision.Colision
 import src.managers.posiciones.*
 
 class Fantasma inherits Personaje{
@@ -10,11 +11,11 @@ class Fantasma inherits Personaje{
         return "fantasma-"+estado+".png"
     }
 
-    method colisionarConPacman(pacman){
+    override method colisionarConPacman(){
         pacman.estado().colisionarConFantasma(self)
     }  
 
-    method colisionarConSombra(pacman){
+    override method colisionarConSombra(){
         pacman.estado().colisionarConFantasma(self)
     }
 
