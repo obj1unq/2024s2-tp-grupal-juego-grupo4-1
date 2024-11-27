@@ -1,0 +1,38 @@
+import wollok.game.*
+import src.personajes.pacman.*
+import src.managers.posiciones.*
+import src.managers.levelManager.*
+import src.managers.menuManager.*
+import src.estados.estadosGame.*
+
+
+program pac_man{
+    game.width(25) 
+    game.height(25)
+    game.addVisual(inicio)
+
+    keyboard.enter().onPressDo({
+        menuManager.pressEnter()
+    })
+    
+    keyboard.backspace().onPressDo({
+        menuManager.pressBackSpace()
+    })
+
+    keyboard.p().onPressDo({
+        menuManager.pressP()
+    })
+    
+    // TECLADO
+
+    game.onCollideDo(pacman, {obj => obj.colisionarConPacman()})
+    game.onCollideDo(pacman.sombra(), {obj => obj.colisionarConSombra()})
+    keyboard.left().onPressDo({pacman.cambioDireccion(izquierda)})
+    keyboard.right().onPressDo({pacman.cambioDireccion(derecha)})
+    keyboard.up().onPressDo({pacman.cambioDireccion(arriba)})
+    keyboard.down().onPressDo({pacman.cambioDireccion(abajo)})
+    keyboard.o().onPressDo({levelManager.puntuacionLevel()})
+
+    game.start()
+
+}
