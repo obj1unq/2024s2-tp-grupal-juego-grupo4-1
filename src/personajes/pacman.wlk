@@ -25,10 +25,6 @@ object pacman inherits Personaje{
     }
 
     
-    method text(){
-        return "" +  levelManager.levelActual()
-    }
-
     method borracho(){
       estado = borracho
     }  
