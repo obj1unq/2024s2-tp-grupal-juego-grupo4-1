@@ -14,6 +14,10 @@ class Fantasma inherits Personaje{
         pacman.estado().colisionarConFantasma(self)
     }  
 
+    method colisionarConSombra(pacman){
+        pacman.estado().colisionarConFantasma(self)
+    }
+
     method asustarse(){
         self.estado(asustado)
     }
