@@ -81,7 +81,7 @@ class CremaDeCielo inherits Helado{
 
     override method colisionarConPacman(){
         super()
-        tickManager.modificarVelocidad(30,160)
-        game.schedule(5000,{tickManager.modificarVelocidad(tickManager.velocidadFantasmasNormal(),tickManager.velocidadPacmanNormal())})
+        tickManager.modificarVelocidad(50,250)
+        game.schedule(3000,{tickManager.modificarVelocidad(tickManager.velocidadFantasmasNormal(),tickManager.velocidadPacmanNormal())})
     }
 }

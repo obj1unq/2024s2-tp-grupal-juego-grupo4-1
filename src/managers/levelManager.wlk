@@ -36,6 +36,7 @@ object levelManager {
     }
 
     method iniciarNivel(){
+        self.clear()
         levelActual.iniciarNivel()
         tickManager.addOnTicks()
         pacman.normal()
