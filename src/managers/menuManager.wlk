@@ -3,7 +3,6 @@ import estados.estadosGame.*
 import portalManager.*
 import heladoManager.*
 import fantasmaManager.*
-import levelManager.*
 // QUE VERIFIQUE EL CAMBIO DE ESTADO
 object menuManager{
     var estadoGame = inicio
