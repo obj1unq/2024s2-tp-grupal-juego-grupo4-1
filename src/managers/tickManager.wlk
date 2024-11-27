@@ -14,6 +14,15 @@ object tickManager {
         onTicks.forEach({ref => game.removeTickEvent(ref)})
     }
 
+
+    method velocidadPacmanNormal (){
+        return 100
+    }
+
+    method velocidadFantasmasNormal (){
+        return 200
+    }
+
     method velocidadFantasmas(){
         return velocidadFantasmas
     }
@@ -38,6 +47,13 @@ object tickManager {
 
     method validarVel(vel){
         if(vel<0) self.error("La velocidad no puede ser velocidad")
+    }
+
+    method modificarVelocidad(velF, velP){
+        self.removeOnTicks()
+        self.velocidadFantasmas(velF)
+        self.velocidadPacman(velP)
+        self.addOnTicks()
     }
 
 

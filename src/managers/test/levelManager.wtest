@@ -29,10 +29,12 @@ describe "LEVEL MANAGER"{
         const heladoChoco = heladoManager.heladoEn(game.at(2,2))
         const balde = heladoManager.heladoEn(game.at(13,1))
         const bebida = heladoManager.heladoEn(game.at(3,2))
+        const crema = heladoManager.heladoEn(game.at(14,1))
         heladoComun.colisionarConPacman()
         heladoChoco.colisionarConPacman()
         balde.colisionarConPacman()
         bebida.colisionarConPacman()
+        crema.colisionarConPacman()
         assert.equals(level1, levelManager.levelActual())
     }
 
